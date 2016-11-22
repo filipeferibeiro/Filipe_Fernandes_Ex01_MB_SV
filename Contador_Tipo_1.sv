@@ -1,7 +1,7 @@
 module Contador_Tipo_1(input logic clock, reset, output logic [3:0] saida);
 	logic posicao;
 	
-	always @(posedge clock)
+	always @(posedge clock or posedge reset)
 		begin
 			if (reset)
 				begin
